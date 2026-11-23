@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Terry Pratchett's Discworld"
+id = "SCUS-94600"
+players = 1
+exe = "disc/SCUS_946.00"
+disc = "disc/Terry Pratchett's Discworld (USA).cue"
+discs = ["disc/Terry Pratchett's Discworld (USA).cue"]
+disc_serials = ["SCUS-94600"]
+load_address = "0x80010000"
+entry_pc = "0x80039BAC"
+text_size = "0x00046800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Terry Pratchett's Discworld (USA).bin"
+cue_name = "Terry Pratchett's Discworld (USA).cue"
+boot_exe = "SCUS_946.00"
+known_sizes = [537718944]
+known_md5 = [
+  "17b79a32f900a36985287895f94be33c",
+]
+known_sha1 = [
+  "7883c9576a70534baa74adb66a9cca56cbce8257",
+]
+known_crc32 = [
+  "43f90d42",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Terry Pratchett's Discworld Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "7c53ad4d7e90999c7beb53bf4415198fc8e1a6f0e2b3c28f97fd90470e6bc341"

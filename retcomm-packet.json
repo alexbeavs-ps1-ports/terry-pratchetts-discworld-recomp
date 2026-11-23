@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "terry-pratchetts-discworld-psx",
+  "name": "Terry Pratchett's Discworld",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "terry-pratchetts-discworld-recomp",
+  "rom_identity": {
+    "crc32": [
+      "43f90d42"
+    ],
+    "md5": [
+      "17b79a32f900a36985287895f94be33c"
+    ],
+    "sha1": [
+      "7883c9576a70534baa74adb66a9cca56cbce8257"
+    ],
+    "disc_serials": [
+      "SCUS-94600"
+    ],
+    "sizes": [
+      537718944
+    ],
+    "filenames": [
+      "Terry Pratchett's Discworld (USA).cue",
+      "Terry Pratchett's Discworld (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "7c53ad4d7e90999c7beb53bf4415198fc8e1a6f0e2b3c28f97fd90470e6bc341"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/terry-pratchetts-discworld-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "terry-pratchetts-discworld-*-windows-x64.zip",
+      "linux-x64": "terry-pratchetts-discworld-*-linux-x64.zip",
+      "macos-arm64": "terry-pratchetts-discworld-*-macos-arm64.zip",
+      "macos-x64": "terry-pratchetts-discworld-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "terry_pratchetts_discworld.exe",
+    "linux": "terry_pratchetts_discworld",
+    "macos": "terry_pratchetts_discworld"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/terry-pratchetts-discworld-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

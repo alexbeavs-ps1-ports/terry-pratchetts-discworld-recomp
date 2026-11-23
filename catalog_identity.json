@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Terry Pratchett's Discworld",
+    "id": "SCUS-94600",
+    "boot_exe": "SCUS_946.00"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Terry Pratchett's Discworld (USA).cue",
+    "bin_name": "Terry Pratchett's Discworld (USA).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 537718944,
+      "md5": "17b79a32f900a36985287895f94be33c",
+      "sha1": "7883c9576a70534baa74adb66a9cca56cbce8257",
+      "crc32": "43f90d42"
+    },
+    "disc_fp": "7c53ad4d7e90999c7beb53bf4415198fc8e1a6f0e2b3c28f97fd90470e6bc341"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x80039BAC",
+    "text_size": "0x00046800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 1034,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
